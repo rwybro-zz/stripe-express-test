@@ -1,5 +1,3 @@
-// MongoDB.
-
 const express = require('express')
 // var https = require('https')
 const queryString = require('querystring')
@@ -28,7 +26,8 @@ const postCode= (res, code) => {
     url:'https://connect.stripe.com/oauth/token',
     form: {
       grant_type: 'authorization_code',
-      client_secret: 'sk_test_Pkoze7OoPNHcHaouk3ApIiG7',
+      //client_secret: 'sk_test_Pkoze7OoPNHcHaouk3ApIiG7',
+      client_secret: 'sk_test_utnY72NPq7I7xY563eV08sxz',
       code: code
     }
   }, function(err, r, body) {
