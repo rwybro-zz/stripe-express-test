@@ -10,9 +10,9 @@ const port = 8080
 app.get('/', (req, res) => {
   var code = req.query.code;
   console.log(`Checking for code`);
+
   try {
     if (!code) throw 'Missing code';
-
     postCode(res, code);
   } catch(error) {
     res.send('Missing code')
@@ -35,6 +35,7 @@ const postCode= (res, code) => {
 
     res.send(`Your token: ${accessToken}`)
     console.log(body)
+
   })
 }
 
